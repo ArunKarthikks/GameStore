@@ -5,7 +5,7 @@ using JobAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JobAPI.Endpoints;
-
+5
 public static class Endpoint
 {
 
@@ -30,7 +30,7 @@ group.MapGet("/", (GameContext context) => {
 group.MapGet("/{id}", (int id, GameContext context) => {
     var game = context.Games.Include(g => g.Genre).FirstOrDefault(g => g.Id == id);
     return game is null ? Results.NotFound() : Results.Ok(new DT(game.Id, game.Name, game.Genre!.Name, game.Price, game.ReleaseDate));
-});
+}).WithName("GetGameById");
 
 // Post /games
 group.MapPost("/", (CreateDT createDT, GameContext context) => {
