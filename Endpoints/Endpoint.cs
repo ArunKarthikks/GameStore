@@ -5,7 +5,7 @@ using JobAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JobAPI.Endpoints;
-5
+
 public static class Endpoint
 {
 
