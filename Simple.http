@@ -1,0 +1,29 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+GET http://localhost:5116/games
+
+###
+GET http://localhost:5116/games/1
+
+###
+POST http://localhost:5116/games
+Content-Type: application/json
+
+{
+    "name": "San Andreas",
+    "genreID": 1,
+    "price": 29.99,
+    "releaseDate": "2013-09-17"
+}   
+
+###
+PUT http://localhost:5116/games/1
+Content-Type: application/json
+
+{
+    "genre": "Action-Adventure",
+    "price": 29.99,
+    "releaseDate": "2013-09-17"
+}           
+
+###
+DELETE http://localhost:5116/games/2
