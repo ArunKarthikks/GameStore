@@ -11,6 +11,6 @@ builder.Services.AddDbContext<GameContext>(options => options.UseSqlServer(conne
 
 var app = builder.Build();
 app.MapGameEndpoints();
-//app.MapGet("/", () => "Hello World!");
+////app.MapGet("/", () => "Hello World!");
 
 app.Run(); 
